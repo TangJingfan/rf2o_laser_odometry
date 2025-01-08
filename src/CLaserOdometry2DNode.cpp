@@ -119,10 +119,10 @@ bool CLaserOdometry2DNode::setLaserPoseFromTf() {
   tf::StampedTransform transform;
   transform.setIdentity();
   try {
-    tf_listener.waitForTransform("/base_footprint", "/laser", ros::Time(),
+    tf_listener.waitForTransform("/base_link", "/laser", ros::Time(),
                                  ros::Duration(5.0));
-    tf_listener.lookupTransform(base_frame_id, last_scan.header.frame_id,
-                                ros::Time(0), transform);
+    tf_listener.lookupTransform("/base_link", "/laser", ros::Time(0),
+                                transform);
     retrieved = true;
   } catch (tf::TransformException &ex) {
     ROS_ERROR("%s", ex.what());
