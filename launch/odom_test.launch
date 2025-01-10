@@ -1,0 +1,3 @@
+<include>
+  <include file="$(find rf2o_laser_odometry)/launch/rf2o_laser_odometry.launch" />
+</include>
