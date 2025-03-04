@@ -1,6 +1,6 @@
 <launch>
   <!-- add transform -->
-  <include file="$(find point_to_point_nav)/launch/base_link_to_laser.launch" />
+  <include file="$(find navigation)/launch/base_link_to_laser.launch" />
   
   <include file="$(find rf2o_laser_odometry)/launch/rf2o_laser_odometry.launch"/>
 </launch>
